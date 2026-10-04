@@ -1,0 +1,58 @@
+Welcome to ComicCraft, an AI Comic Story Creator powered by Gemini models.
+
+In this video, I will explain how to execute the ComicCraft project from start to finish.
+
+First, open the ComicCraft project folder in Visual Studio Code.
+
+Open the integrated terminal and create a Python virtual environment using:
+python minus m venv venv.
+
+Activate the environment with:
+venv backslash Scripts backslash activate.
+
+Next, install the required packages with:
+pip install minus r requirements dot txt.
+
+The project uses Flask for the web application, Google Gemini for AI generation, SQLite for storing users and comics, and ReportLab for PDF export.
+
+Now create a dot env file from the example file.
+Inside it, add your Gemini API key.
+The API key must remain on the server and should not be placed in browser JavaScript.
+
+Start the application by running:
+python app dot py.
+
+Open a browser and go to:
+http colon slash slash 127 dot 0 dot 0 dot 1 colon 5000.
+
+On the ComicCraft home page, create an account or log in.
+
+Enter a story idea. For example:
+A young girl enters an enchanted forest where talking trees and magical animals live.
+A dark spell is destroying the forest, and she must find a mysterious golden flower to save it.
+
+Choose a genre, the number of panels, and an illustration style.
+
+Click Generate my story.
+
+The backend sends a structured prompt to Gemini.
+Gemini returns the comic title, summary, characters, scenes, dialogue, and panel descriptions.
+
+Next, click Generate image on a panel, or illustrate all panels.
+The backend sends the panel description and character information to the Gemini image model.
+The generated image is stored in the static generated folder.
+
+After the panels are ready, click Save comic.
+The comic data is stored in the SQLite database.
+
+The saved comic appears in the My Comic Library section.
+From there, the application can open the comic or generate a PDF.
+
+This is the complete ComicCraft execution flow:
+User idea, Gemini story generation, panel image generation, database storage, and PDF export.
+
+For the linked GitHub project, the supplied README documents the Enchanted Forest prompt and gives the command:
+python minus m uvicorn app colon app minus minus reload.
+Use that command when running the linked repository itself.
+
+Thank you for watching this ComicCraft execution walkthrough.
